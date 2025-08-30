@@ -4,8 +4,8 @@
 
 ```
 🔥 feat: Título corto (máx 50-60 caracteres)
-|
-|- Explicación detallada de los cambios realizados
+
+- Explicación detallada de los cambios realizados
 ```
 
 ## Características
@@ -31,8 +31,8 @@
 
 ```
 🎉 feat: Agregar búsqueda de GIFs por categoría
-|
-|- Implementa componente CategorySelector con filtros predefinidos
-|- Integra API de categorías de Giphy
-|- Actualiza interfaz de usuario con nuevos botones de categoría
+
+- Implementa componente CategorySelector con filtros predefinidos
+- Integra API de categorías de Giphy
+- Actualiza interfaz de usuario con nuevos botones de categoría
 ```
