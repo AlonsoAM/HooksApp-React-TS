@@ -6,13 +6,15 @@ const colors = {
   green: "bg-green-500 animate-pulse",
 }
 
+type Color = keyof typeof colors
+
 const defaultColor = "bg-gray-500"
 const commonStyles = "w-32 h-32 rounded-full"
 
 export const TrafficLight = () => {
-  const [light, setLight] = useState("")
+  const [light, setLight] = useState<Color>("red")
 
-  const handleClick = (color: string) => setLight(color)
+  const handleClick = (color: Color) => setLight(color)
 
   return (
     <div
