@@ -6,6 +6,9 @@ const colors = {
   green: "bg-green-500 animate-pulse",
 }
 
+const defaultColor = "bg-gray-500"
+const commonStyles = "w-32 h-32 rounded-full"
+
 export const TrafficLight = () => {
   const [light, setLight] = useState("")
 
@@ -15,9 +18,9 @@ export const TrafficLight = () => {
     <div
       className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 flex items-center justify-center p-4">
       <div className="flex flex-col items-center space-y-8">
-        <div className={`w-32 h-32 ${light === 'red' ? colors[light] : "bg-gray-500"} rounded-full`}></div>
-        <div className={`w-32 h-32 ${light === 'yellow' ? colors[light] : "bg-gray-500"} rounded-full`}></div>
-        <div className={`w-32 h-32 ${light === 'green' ? colors[light] : "bg-gray-500"} rounded-full`}></div>
+        <div className={`${commonStyles} ${light === 'red' ? colors[light] : defaultColor}`}></div>
+        <div className={`${commonStyles} ${light === 'yellow' ? colors[light] : defaultColor}`}></div>
+        <div className={`${commonStyles} ${light === 'green' ? colors[light] : defaultColor}`}></div>
 
         {/* Botón para cambiar el estado de la luz */}
         <div className="flex gap-2">
