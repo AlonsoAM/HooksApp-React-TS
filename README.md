@@ -10,12 +10,18 @@ Una aplicación completa de React desarrollada con TypeScript, Vite y Tailwind C
 - **Vite** como build tool para desarrollo ultrarrápido
 - **ESLint** configurado con reglas específicas para React Hooks
 - **Ejemplos prácticos** con casos de uso del mundo real
+- **Componentes UI** con Shadcn/ui para interfaces modernas
+- **Animaciones interactivas** con canvas-confetti
+- **Gestión de estado compleja** con useReducer
 
 ## 📦 Tecnologías
 
 - **Frontend**: React 19 + TypeScript
 - **Build Tool**: Vite 7
 - **Estilos**: Tailwind CSS 4
+- **UI Components**: Shadcn/ui (Radix UI)
+- **Animaciones**: Canvas Confetti
+- **Icons**: Lucide React
 - **Linting**: ESLint + TypeScript ESLint
 - **Package Manager**: npm
 
@@ -52,6 +58,10 @@ npm run lint     # Ejecuta ESLint para revisar el código
 ### `useRef` Examples
 - **FocusScreen**: Manejo del focus y referencias a elementos DOM
 
+### `useReducer` Examples
+- **TaskApp**: Aplicación de gestión de tareas con estados complejos
+- **ScrambleWords**: Juego interactivo de palabras desordenadas con sistema de puntuación
+
 ### Custom Hooks
 
 #### `useCounter`
@@ -79,18 +89,38 @@ const { currentLight, nextLight } = useTrafficLight();
 
 ```
 src/
-├── 01-useState/          # Ejemplos de useState
-├── 02-useEffect/         # Ejemplos de useEffect  
-├── 03-examples/          # Ejemplos complejos (PokemonPage)
-├── 04-useRef/            # Ejemplos de useRef
-├── hooks/                # Custom hooks reutilizables
-│   ├── useCounter.tsx
-│   ├── usePokemon.tsx
-│   └── useTrafficLight.tsx
-├── HooksApp.tsx          # Componente principal
-└── main.tsx              # Punto de entrada
+├── 01-useState/                    # Ejemplos de useState
+│   └── TrafficLight.tsx                # Sistema de semáforos básico
+├── 02-useEffect/                   # Ejemplos de useEffect  
+│   ├── TrafficLightWithEffect.tsx      # Semáforo automático
+│   └── TrafficLightWithHook.tsx        # Semáforo con custom hook
+├── 03-examples/                    # Ejemplos complejos
+│   └── PokemonPage.tsx                 # Página de Pokémon con API
+├── 04-useRef/                      # Ejemplos de useRef
+│   └── FocusScreen.tsx                 # Manejo de focus y referencias DOM
+├── 05-useReducer/                  # Ejemplos de useReducer
+│   ├── reducer/                        # Reducers reutilizables
+│   │   ├── scrambleReducer.ts              # Lógica del juego de palabras
+│   │   └── tasksReducer.ts                 # Lógica de gestión de tareas
+│   ├── ScrambleWords.tsx               # Juego de palabras desordenadas
+│   └── TaskApp.tsx                     # Aplicación de gestión de tareas
+├── components/                     # Componentes UI reutilizables
+│   └── ui/                             # Componentes Shadcn/ui
+│       ├── button.tsx                      # Componente Button
+│       ├── card.tsx                        # Componente Card
+│       ├── checkbox.tsx                    # Componente Checkbox  
+│       └── input.tsx                       # Componente Input
+├── hooks/                          # Custom hooks reutilizables
+│   ├── useCounter.tsx                  # Hook para contadores
+│   ├── usePokemon.tsx                  # Hook para API de Pokémon
+│   └── useTrafficLight.tsx             # Hook para semáforos
+├── lib/                            # Utilidades y configuraciones
+│   └── utils.ts                        # Funciones de utilidad (cn, clsx)
+├── HooksApp.tsx                # Componente principal de la aplicación
+├── index.css                   # Estilos globales y Tailwind
+├── main.tsx                    # Punto de entrada de React
+└── vite-env.d.ts               # Definiciones de tipos para Vite
 ```
-
 
 ## 🎨 Características Técnicas
 
@@ -138,6 +168,25 @@ Implementaciones múltiples demostrando:
 - Efectos automáticos con `useEffect`
 - Lógica reutilizable con custom hooks
 
+### Juego de Palabras Desordenadas (ScrambleWords)
+Ejemplo avanzado que implementa un juego completo con:
+- **Gestión de estado compleja** usando `useReducer`
+- **Sistema de puntuación** con límites de errores y saltos
+- **Animaciones de confetti** cuando se adivina correctamente
+- **Interfaz responsive** con gradientes y animaciones CSS
+- **17 palabras de tecnología** para adivinar
+- **Funciones puras** en el reducer para lógica de juego
+- **Componentes UI modernos** con Shadcn/ui
+
+Características del juego:
+- ✨ Efectos de confetti al acertar una palabra
+- 🎯 Sistema de puntos (máximo 17)
+- ❌ Máximo 3 errores permitidos
+- ⏭️ Máximo 3 saltos disponibles
+- 🔄 Palabras aleatorias en cada partida
+- 🎨 Interfaz moderna con gradientes
+- 📱 Completamente responsive
+
 ## 📚 Aprendizaje
 
 Este proyecto es ideal para:
@@ -145,6 +194,10 @@ Este proyecto es ideal para:
 - Entender patrones de custom hooks
 - Practicar TypeScript con React
 - Explorar técnicas de optimización de performance
+- Dominar `useReducer` para estados complejos
+- Implementar juegos interactivos con React
+- Trabajar con animaciones y efectos visuales
+- Crear interfaces modernas con Tailwind CSS y Shadcn/ui
 
 ## 🤝 Contribución
 
