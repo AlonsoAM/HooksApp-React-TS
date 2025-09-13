@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useReducer, useState} from 'react';
 
 import {Plus, Trash2, Check} from 'lucide-react';
 
@@ -6,51 +6,31 @@ import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Checkbox} from '@/components/ui/checkbox';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {getTasksInitialState, tasksReducer} from "@/05-useReducer/reducer/tasksReducer.ts";
 
-interface Todo {
-  id: number;
-  text: string;
-  completed: boolean;
-}
 
 export const TasksApp = () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  // const [todos, setTodos] = useState<Todo[]>([]);
   const [inputValue, setInputValue] = useState('');
+  const [state, dispatch] = useReducer(tasksReducer, getTasksInitialState())
 
   const addTodo = () => {
 
     if (inputValue.trim() === '') return;
     if (inputValue.length === 0) return;
 
-    const newTodo: Todo = {
-      id: Date.now(),
-      text: inputValue.trim(),
-      completed: false,
-    };
+    dispatch({type: 'ADD_TODO', payload: inputValue})
 
-    setTodos([...todos, newTodo]);
     setInputValue('');
 
   };
 
-  const toggleTodo = (id: number) => {
+  const toggleTodo = (id: number) =>
+    dispatch({type: 'TOGGLE_TODO', payload: id})
 
-    const updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        return {...todo, completed: !todo.completed}
-      }
-      return todo
-    })
-    setTodos(updatedTodos);
 
-  };
-
-  const deleteTodo = (id: number) => {
-
-    const updatedTodos = todos.filter(todo => todo.id !== id);
-    setTodos(updatedTodos);
-
-  };
+  const deleteTodo = (id: number) =>
+    dispatch({type: 'DELETE_TODO', payload: id})
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
@@ -58,8 +38,7 @@ export const TasksApp = () => {
     }
   };
 
-  const completedCount = todos.filter((todo) => todo.completed).length;
-  const totalCount = todos.length;
+  const {todos, completedCount: completedCount, length: totalCount} = state;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4">
