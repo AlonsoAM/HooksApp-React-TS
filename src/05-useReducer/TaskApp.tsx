@@ -10,7 +10,7 @@ import {getTasksInitialState, tasksReducer} from "@/05-useReducer/reducer/tasksR
 
 
 export const TasksApp = () => {
-  // const [todos, setTodos] = useState<Todo[]>([]);
+
   const [inputValue, setInputValue] = useState('');
   const [state, dispatch] = useReducer(tasksReducer, getTasksInitialState())
 
@@ -42,7 +42,7 @@ export const TasksApp = () => {
     }
   };
 
-  const {todos, completedCount: completedCount, length: totalCount} = state;
+  const {todos, completedCount, length: totalCount} = state;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 p-4">
