@@ -26,25 +26,31 @@ Una aplicación completa de React desarrollada con TypeScript, Vite y Tailwind C
 - **Package Manager**: npm
 
 ## 🛠️ Instalación
-```
-bash
-# Clonar el repositorio
-git clone <repository-url>
-cd 04-hooks-app
+```bash
+  # Clonar el repositorio
+  git clone <repository-url>
+  cd 04-hooks-app
 
-# Instalar dependencias
-npm install
+  # Instalar dependencias
+  npm install
 
-# Ejecutar en desarrollo
-npm run dev
+  # Ejecutar en desarrollo
+  npm run dev
 ```
+
 ## 📜 Scripts Disponibles
-```
-bash
-npm run dev      # Ejecuta el servidor de desarrollo
-npm run build    # Construye la aplicación para producción
-npm run preview  # Previsualiza la build de producción
-npm run lint     # Ejecuta ESLint para revisar el código
+```bash
+  # Ejecuta el servidor de desarrollo
+  npm run dev     
+  
+  # Construye la aplicación para producción 
+  npm run build    
+  
+  # Previsualiza la build de producción
+  npm run preview  
+  
+  # Ejecuta ESLint para revisar el código
+  npm run lint     
 ```
 ## 🎯 Hooks Implementados
 
