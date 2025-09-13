@@ -8,12 +8,13 @@ import "./index.css";
 // import {FocusScreen} from "./04-useRef/FocusScreen.tsx";
 // import {TasksApp} from "@/05-useReducer/TaskApp.tsx";
 // import {ScrambleWords} from "@/05-useReducer/ScrambleWords.tsx";
-import {MemoHook} from "@/06-memos/MemoHook.tsx";
+// import {MemoHook} from "@/06-memos/MemoHook.tsx";
+import {MemoCounter} from "@/06-memos/MemoCounter.tsx";
 // import { HooksApp } from "./HooksApp";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {/* <HooksApp /> */}
-    <MemoHook />
+    <MemoCounter />
   </StrictMode>
 );
