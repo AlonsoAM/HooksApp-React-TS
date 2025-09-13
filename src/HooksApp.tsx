@@ -1,7 +1,3 @@
 export const HooksApp = () => {
-  return (
-    <div>
-      <h1>Hola Mundo!!</h1>
-    </div>
-  );
+  return <div className="bg-gradient"></div>;
 };
