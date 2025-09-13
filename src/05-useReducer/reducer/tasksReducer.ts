@@ -17,6 +17,10 @@ export type TasksAction =
   { type: 'DELETE_TODO', payload: number }
 
 export const getTasksInitialState = (): TasksState => {
+  const localStorageState = localStorage.getItem('tasks')
+  if (localStorageState) {
+    return JSON.parse(localStorageState)
+  }
   return {
     todos: [],
     length: 0,
