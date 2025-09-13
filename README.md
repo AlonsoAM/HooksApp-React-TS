@@ -13,6 +13,10 @@ Una aplicación completa de React desarrollada con TypeScript, Vite y Tailwind C
 - **Componentes UI** con Shadcn/ui para interfaces modernas
 - **Animaciones interactivas** con canvas-confetti
 - **Gestión de estado compleja** con useReducer
+- **Optimización de performance** con React.memo, useMemo y useCallback
+- **Hooks experimentales de React 19** (useOptimistic, use)
+- **Suspense moderno** para carga asíncrona de datos
+- **Server Actions** y comunicación cliente-servidor
 
 ## 📦 Tecnologías
 
@@ -68,6 +72,20 @@ Una aplicación completa de React desarrollada con TypeScript, Vite y Tailwind C
 - **TaskApp**: Aplicación de gestión de tareas con estados complejos
 - **ScrambleWords**: Juego interactivo de palabras desordenadas con sistema de puntuación
 
+### Optimización con Memos
+- **React.memo**: Memorización de componentes para prevenir re-renders innecesarios
+- **useMemo**: Memorización de cálculos costosos
+- **useCallback**: Memorización de funciones para optimización de performance
+
+### `useOptimistic` Examples (React 19)
+- **Actualizaciones optimistas**: UI que responde inmediatamente a acciones del usuario
+- **Estados transicionales**: Manejo de estados mientras se procesan operaciones asíncronas
+
+### `use` Hook + Suspense (React 19)
+- **ClientInformation**: Componente que demuestra el nuevo hook `use` con Suspense
+- **Carga asíncrona**: Manejo moderno de promesas y recursos asíncronos
+- **API integrations**: Conexión con servicios externos usando patrones modernos
+
 ### Custom Hooks
 
 #### `useCounter`
@@ -110,6 +128,14 @@ src/
 │   │   └── tasksReducer.ts                 # Lógica de gestión de tareas
 │   ├── ScrambleWords.tsx               # Juego de palabras desordenadas
 │   └── TaskApp.tsx                     # Aplicación de gestión de tareas
+├── 06-memos/                       # Ejemplos de optimización con memos
+│   └── [Componentes de memorización]       # React.memo, useMemo, useCallback
+├── 07-useOptimistic/               # Ejemplos de useOptimistic (React 19)
+│   └── [Componentes optimistas]            # Actualizaciones optimistas de UI
+├── 08-use-suspense/                # Ejemplos de use + Suspense (React 19)
+│   ├── api/                            # Servicios y acciones del servidor
+│   │   └── get-user-action.ts              # Action para obtener datos de usuario
+│   └── ClientInformation.tsx           # Componente con hook use y Suspense
 ├── components/                     # Componentes UI reutilizables
 │   └── ui/                             # Componentes Shadcn/ui
 │       ├── button.tsx                      # Componente Button
@@ -193,17 +219,42 @@ Características del juego:
 - 🎨 Interfaz moderna con gradientes
 - 📱 Completamente responsive
 
+### Funcionalidades de React 19
+
+#### Hook `useOptimistic`
+Permite crear interfaces optimistas que actualizan inmediatamente la UI mientras se procesan operaciones en segundo plano:
+- Mejora la percepción de velocidad de la aplicación
+- Manejo elegante de estados de carga
+- Rollback automático en caso de errores
+
+#### Hook `use` + Suspense
+Nueva forma de manejar promesas y recursos asíncronos:
+- Sintaxis más limpia para operaciones asíncronas
+- Integración nativa con Suspense
+- Mejor experiencia de desarrollador
+
+#### Optimización de Performance
+Técnicas avanzadas implementadas:
+- **React.memo**: Prevención de re-renders innecesarios
+- **useMemo**: Memorización de cálculos costosos
+- **useCallback**: Estabilización de referencias de funciones
+- Patrones de optimización en aplicaciones reales
+
 ## 📚 Aprendizaje
 
 Este proyecto es ideal para:
 - Aprender React Hooks desde lo básico hasta lo avanzado
 - Entender patrones de custom hooks
 - Practicar TypeScript con React
-- Explorar técnicas de optimización de performance
+- Explorar técnicas de optimización de performance avanzadas
 - Dominar `useReducer` para estados complejos
 - Implementar juegos interactivos con React
 - Trabajar con animaciones y efectos visuales
 - Crear interfaces modernas con Tailwind CSS y Shadcn/ui
+- **Experimentar con React 19**: useOptimistic, use hook, Suspense moderno
+- **Optimización de renders**: React.memo, useMemo, useCallback
+- **Patrones asíncronos modernos**: Server Actions y comunicación cliente-servidor
+- **UX optimista**: Interfaces que responden inmediatamente a las acciones del usuario
 
 ## 🤝 Contribución
 
