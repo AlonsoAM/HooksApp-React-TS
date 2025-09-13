@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import { Toaster } from 'sonner'
 import "./index.css";
 // import { TrafficLight } from "./01-useState/TrafficLight";
 // import {TrafficLightWithEffect} from "./02-useEffect/TrafficLightWithEffect";
@@ -9,12 +10,14 @@ import "./index.css";
 // import {TasksApp} from "@/05-useReducer/TaskApp.tsx";
 // import {ScrambleWords} from "@/05-useReducer/ScrambleWords.tsx";
 // import {MemoHook} from "@/06-memos/MemoHook.tsx";
-import {MemoCounter} from "@/06-memos/MemoCounter.tsx";
+// import {MemoCounter} from "@/06-memos/MemoCounter.tsx";
+import {InstagromApp} from "@/07-useOptimistic/InstagromApp.tsx";
 // import { HooksApp } from "./HooksApp";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
+    <Toaster richColors  />
     {/* <HooksApp /> */}
-    <MemoCounter />
+    <InstagromApp />
   </StrictMode>
 );
