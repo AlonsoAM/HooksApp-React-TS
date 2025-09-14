@@ -86,6 +86,14 @@ Una aplicación completa de React desarrollada con TypeScript, Vite y Tailwind C
 - **Carga asíncrona**: Manejo moderno de promesas y recursos asíncronos
 - **API integrations**: Conexión con servicios externos usando patrones modernos
 
+### `useContext` Examples
+- **ProfessionalApp**: Sistema completo de gestión empresarial con contexto global
+- **Autenticación y autorización**: Sistema de login con rutas privadas
+- **Estado global compartido**: Manejo de estado de usuario entre componentes
+- **Context Provider**: Proveedor de contexto reutilizable para toda la aplicación
+- **Enrutamiento avanzado**: Protección de rutas basada en autenticación
+- **Navegación dinámica**: Sistema de navegación que responde al estado del usuario
+
 ### Custom Hooks
 
 #### `useCounter`
@@ -136,6 +144,17 @@ src/
 │   ├── api/                            # Servicios y acciones del servidor
 │   │   └── get-user-action.ts              # Action para obtener datos de usuario
 │   └── ClientInformation.tsx           # Componente con hook use y Suspense
+├── 09-useContext/                  # Ejemplos de useContext y estado global
+│   ├── context/                        # Contextos de la aplicación
+│   │   └── [Context providers]             # Proveedores de contexto global
+│   ├── data/                           # Datos mock y configuraciones
+│   │   └── [Mock data]                     # Datos de prueba para la aplicación
+│   ├── pages/                          # Páginas de la aplicación profesional
+│   │   └── [App pages]                     # Componentes de página
+│   ├── router/                         # Sistema de enrutamiento
+│   │   ├── app.router.tsx                  # Configuración principal del router
+│   │   └── PrivateRoute.tsx                # Componente para rutas privadas
+│   └── ProfessionalApp.tsx             # Aplicación empresarial completa
 ├── components/                     # Componentes UI reutilizables
 │   └── ui/                             # Componentes Shadcn/ui
 │       ├── button.tsx                      # Componente Button
@@ -219,6 +238,25 @@ Características del juego:
 - 🎨 Interfaz moderna con gradientes
 - 📱 Completamente responsive
 
+### Sistema Empresarial Profesional (ProfessionalApp)
+Implementación completa de una aplicación empresarial que demuestra:
+- **Contexto Global de Usuario**: Manejo centralizado del estado de autenticación
+- **Enrutamiento Privado**: Protección automática de rutas basada en autenticación
+- **Dashboard Empresarial**: Panel de control con métricas y datos de negocio
+- **Gestión de Sesiones**: Login, logout y persistencia de estado
+- **Navegación Condicional**: Menús y opciones que cambian según el usuario
+- **Arquitectura Escalable**: Patrón de contexto para aplicaciones grandes
+- **Separación de Responsabilidades**: Contextos especializados por funcionalidad
+
+Características del sistema:
+- 🔐 **Sistema de autenticación completo**
+- 🛡️ **Rutas protegidas automáticamente**
+- 📊 **Dashboard con métricas empresariales**
+- 👤 **Gestión de perfiles de usuario**
+- 🎯 **Estado global reactivo**
+- 🔄 **Navegación dinámica**
+- 📱 **Interfaz responsive empresarial**
+
 ### Funcionalidades de React 19
 
 #### Hook `useOptimistic`
@@ -255,6 +293,10 @@ Este proyecto es ideal para:
 - **Optimización de renders**: React.memo, useMemo, useCallback
 - **Patrones asíncronos modernos**: Server Actions y comunicación cliente-servidor
 - **UX optimista**: Interfaces que responden inmediatamente a las acciones del usuario
+- **Gestión de estado global**: useContext para aplicaciones complejas
+- **Arquitectura empresarial**: Patrones de contexto para sistemas escalables
+- **Autenticación y autorización**: Sistemas de login con rutas protegidas
+- **Enrutamiento avanzado**: React Router con protección condicional
 
 ## 🤝 Contribución
 
