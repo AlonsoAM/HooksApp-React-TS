@@ -1,12 +1,12 @@
-import {Input} from "@/components/ui/input.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import {Link, useNavigate} from "react-router";
-import {type FormEvent, useContext, useState} from "react";
-import {UserContext} from "@/09-useContext/context/UserContext.tsx";
-import {toast} from "sonner";
+import { Input } from "@/components/ui/input.tsx";
+import { Button } from "@/components/ui/button.tsx";
+import { Link, useNavigate } from "react-router";
+import { type FormEvent, useContext, useState } from "react";
+import { UserContext } from "@/09-useContext/context/UserContext.tsx";
+import { toast } from "sonner";
 
 export const LoginPage = () => {
-  
+
   const { login } = useContext(UserContext)
 
   const [userId, setUserId] = useState('')
@@ -16,7 +16,7 @@ export const LoginPage = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    
+
     const result = login(+userId)
 
     console.log(result)
@@ -26,15 +26,15 @@ export const LoginPage = () => {
       return
     }
 
-    navigation('/profile')
+    navigation('/context/profile')
   }
 
   return (
     <div className={'flex flex-col items-center justify-center min-h-screen'}>
       <h1 className={'text-4xl font-bold'}>Iniciar Sesión</h1>
-      <hr/>
+      <hr />
       <form className={'flex flex-col gap-2 my-10'}
-            onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}>
         <Input
           type={'number'}
           placeholder={'Id de usuario'}
@@ -43,12 +43,12 @@ export const LoginPage = () => {
           onChange={(e) => setUserId(e.target.value)}
         />
         <Button type={'submit'}
-                className={'bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'}
+          className={'bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600'}
         >
           Login
         </Button>
       </form>
-      <Link to={'/'}>
+      <Link to={'/context'}>
         <Button variant={'ghost'}>
           Volver a la página principal
         </Button>

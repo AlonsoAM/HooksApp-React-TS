@@ -1,14 +1,14 @@
-import {type JSX, use} from "react";
-import {UserContext} from "@/09-useContext/context/UserContext.tsx";
-import {Navigate} from "react-router";
+import { type JSX, use } from "react";
+import { UserContext } from "@/09-useContext/context/UserContext.tsx";
+import { Navigate } from "react-router";
 
 interface Props {
   element: JSX.Element
 }
 
-export const PrivateRoute = ({element}: Props) => {
+export const PrivateRoute = ({ element }: Props) => {
 
-  const {authStatus} = use(UserContext)
+  const { authStatus } = use(UserContext)
 
   if (authStatus === 'checking') {
     return <div>Cargando...</div>
@@ -18,5 +18,5 @@ export const PrivateRoute = ({element}: Props) => {
     return element
   }
 
-  return <Navigate to={'/login'} replace/>
+  return <Navigate to={'/context/login'} replace />
 }
