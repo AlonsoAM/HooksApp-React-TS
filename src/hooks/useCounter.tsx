@@ -14,7 +14,7 @@ export const useCounter = (initialValue: number = 1) => {
     // properties
     counter,
 
-    // methods
+    // metodos
     increment,
     decrement,
   }
